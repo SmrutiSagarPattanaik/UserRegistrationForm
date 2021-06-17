@@ -1,0 +1,40 @@
+<h1 class="registration-form-title">
+    USER REGISTRATION FORM
+</h1>
+<form [formGroup]= "userRegisterForm" (ngSubmit)="onFormSubmission()">
+    <app-text-input-field label="First Name" [control]="userRegisterForm.get('fName')"></app-text-input-field>
+
+    <app-text-input-field label="Middle Name" [control]="userRegisterForm.get('mName')"></app-text-input-field>
+
+    <app-text-input-field label="Last Name" [control]="userRegisterForm.get('lName')"></app-text-input-field>
+
+    <app-number-input-field label="Mobile" [control]="userRegisterForm.get('mobile')"></app-number-input-field>
+
+    <app-email-input-field label="Email" [control]="userRegisterForm.get('email')"></app-email-input-field>
+
+    <app-password-input-field label="Password" [control]="userRegisterForm.get('password')"></app-password-input-field>
+
+    <app-date-input-field label="BirthDate" [control]="userRegisterForm.get('birthdate')"></app-date-input-field>
+
+    <app-text-input-field label="City" [control]="userRegisterForm.get('city')"></app-text-input-field>
+
+    <app-number-input-field label="Pincode" [control]="userRegisterForm.get('pincode')"></app-number-input-field>
+
+    <app-text-input-field label="State" [control]="userRegisterForm.get('state')"></app-text-input-field>
+
+    <button type="submit" [disabled]="userRegisterForm.invalid" class="register-button">
+        Register
+    </button>
+
+    <button (click)="onClickingResetButton()" type="button" class="reset-button">
+        Reset
+    </button>
+</form>
+
+<!-- The below lines are for debug purpose -->
+<!-- <hr>
+<div>Form Controls: {{userRegisterForm.value | json}}</div>
+
+<div>Form is valid: {{userRegisterForm.valid}}</div>
+
+<div>Errors around input name:{{userRegisterForm.controls.fName.errors|json}}</div> -->

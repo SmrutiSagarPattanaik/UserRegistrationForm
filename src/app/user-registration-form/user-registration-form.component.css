@@ -1,0 +1,23 @@
+.registration-form-title {
+    text-align: center;
+    text-decoration: underline;
+    font: normal bold 40px Roboto, sans-serif;
+}
+
+.register-button, .reset-button {
+    display: block;
+    margin: 0 auto 20px;
+    font: normal bold 15px Roboto, sans-serif; 
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.reset-button:hover {
+    cursor: pointer;
+    background: #00ffff;
+    color: #000000;
+}
+
+.register-button:hover {
+    cursor: pointer;
+}
